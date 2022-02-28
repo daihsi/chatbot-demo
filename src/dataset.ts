@@ -1,16 +1,11 @@
-type Answers = {
-  content: string,
-  nextId: string
-} 
+import type {TypeAnswer} from "./types/index";
 
-type DefaultDataset  = {
-  [key: string]: {
-    answers: Answers[], 
-    question: string
-  }
-}
-
-const defaultDataset: DefaultDataset = {
+export const defaultDataset: {
+    [key: string]: {
+        answers: TypeAnswer[],
+        question: string
+    }
+} = {
   "init": {
       answers: [
           {content: "仕事を依頼したい", nextId: "job_offer"},
